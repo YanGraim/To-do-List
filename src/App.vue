@@ -5,9 +5,9 @@
         <h1>To do List</h1>
       </div>
       <v-spacer></v-spacer>
-      <v-btn href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank" text>
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn href="https://vuetifyjs.com/en/components/all/" target="_blank" text>
+        <span class="mr-2">Vuetify</span>
+        <v-icon>mdi-vuetify</v-icon>
       </v-btn>
     </v-app-bar>
     <v-main>
