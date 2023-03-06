@@ -6,9 +6,9 @@
                     mdi-account
                 </v-icon>
             </v-avatar>
-            <v-text-field name="name" label="login" id="id" style="width: 60%;"></v-text-field>
-            <v-text-field name="name" label="senha" id="id" style="width: 60%;" type="password"></v-text-field>
-            <v-btn>Entrar</v-btn>
+            <v-text-field label="login" style="width: 60%;" v-model="loginUser"></v-text-field>
+            <v-text-field label="senha" style="width: 60%;" type="password" v-model="senhaUser"></v-text-field>
+            <v-btn @click="checaLogin">Entrar</v-btn>
         </div>
     </v-container>
 </template>
@@ -16,6 +16,23 @@
 <script>
 export default {
     name: "LoginView",
+    data: () => ({
+        login: "Admin",
+        senha: "admin",
+        loginUser: null,
+        senhaUser: null,
+    }),
+    methods: {
+        checaLogin() {
+            if (this.loginUser == this.login && this.senhaUser == this.senha) {
+                this.$router.push('/about')
+            } 
+            else {
+                alert("Login ou senha errado")
+            }
+
+        }
+    }
 };
 </script>
 
